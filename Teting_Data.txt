@@ -1,0 +1,74 @@
+Problem :- 
+
+Kata details
+You are part of a team that explores the bottom of the sea using a remotely controlled submersible probe. Develop a REST API that allows control of the probe from the surface using a set of interpreted controls. 
+
+Requirements:
+
+You have a defined grid representing the ocean floor where location can be identified using x/y co-ordinates.
+You are given an initial starting point (x,y) for the probe and the direction it is facing.
+The probe will receive a collection of commands.
+It should be able to:
+Move forwards and backwards.
+Turn left and right.
+Stay on the grid.
+Avoid obstacles in the grid.
+Print a summary of the co-ordinates visited.
+
+To Solve the Above problem, I created a Rest API which contain 4 Http Methods, and here is below Http methods details and testing data.
+
+API 1 :- It is used to Initialize the remotely controlled submersible probe
+
+To Test the API(Postman):--
+
+URL: http://localhost:8080/probe/initialize
+Method: POST
+JSON Request:
+ {
+  "probe": {
+    "x": 0,
+    "y": 0,
+    "direction": "NORTH"
+  },
+  "grid": {
+    "width": 10,
+    "height": 10,
+    "obstacles": [
+      {
+        "x": 3,
+        "y": 4
+      }
+    ]
+  }
+}
+
+
+API 2 :- It is used to provide the commands to move the Probe forwards and backwards, Turn left and right and Stay on the grid. we can also provide muliple command all together as a list pf command to move the probe.
+
+To Test the API(Postman):--
+
+URL: http://localhost:8080/probe/commands
+Method: POST
+JSON Request:
+
+{
+  "commands": [
+    "FORWARD",
+    "RIGHT",
+    "FORWARD"
+  ]
+}
+
+API 3 :- It is used to get the visited cordinated of the Probe.
+
+To Test the API(Postman):--
+
+URL: http://localhost:8080/probe/visited
+Method: GET
+
+API 4 :- It is used to get the current cordinated/position and direction of the Probe.
+
+To Test the API(Postman):--
+
+URL: http://localhost:8080/probe/current
+Method: GET
