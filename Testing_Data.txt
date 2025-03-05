@@ -43,7 +43,7 @@ JSON Request:
 }
 
 
-API 2 :- It is used to provide the commands to move the Probe forwards and backwards, Turn left and right and Stay on the grid. we can also provide muliple command all together as a list pf command to move the probe.
+API 2 :- It is used to provide the commands to move the Probe forwards and backwards, Turn left and right and Stay on the grid. we can also provide multiple command all together as a list pf command to move the probe.
 
 To Test the API(Postman):--
 
@@ -59,14 +59,14 @@ JSON Request:
   ]
 }
 
-API 3 :- It is used to get the visited cordinated of the Probe.
+API 3 :- It is used to get the visited co0rdinated of the Probe.
 
 To Test the API(Postman):--
 
 URL: http://localhost:8080/probe/visited
 Method: GET
 
-API 4 :- It is used to get the current cordinated/position and direction of the Probe.
+API 4 :- It is used to get the current co0rdinated/position and direction of the Probe.
 
 To Test the API(Postman):--
 
